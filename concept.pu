@@ -1,0 +1,46 @@
+@startuml  
+
+class Library {
+    name
+}
+
+class Branch {
+    name
+}
+
+class Address {
+    street name
+    building number
+}
+
+class Book {
+    name
+    genre
+    serial number
+    copies
+}
+
+class Author {
+    firstname
+    lastname
+}
+
+class Customer {
+    firstname
+    lastname
+}
+
+class BookLoan {
+    loan date
+    return date
+    overdue days
+}
+
+Library "1..*" -> "1" Branch : has branch
+Branch "1..*" --> "1" Address : has address
+Branch "1..*" -down-> "1" Book : has book
+Author "1..*" -> "*" Book : writes
+Book "1..*" -down-> "1" BookLoan : is borrowed
+Customer "1..*" -up-> "1" BookLoan : receives
+
+@enduml
