@@ -1,0 +1,32 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "addresses.csv",
+    "tableSchema": {
+        "columns": [{
+            "name": "id",
+            "titles": "id",
+            "dc:description": "The unique id for the address",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "city",
+            "titles": "city",
+            "dc:description": "The city the address is referring to",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "street_name",
+            "titles": "street name",
+            "dc:description": "The street of the address",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "building_no",
+            "titles": "building number",
+            "dc:description": "The house number of the building",
+            "datatype": "nonNegativeInteger",
+            "required": true
+        }],
+        "primaryKey": "id"
+    }
+}

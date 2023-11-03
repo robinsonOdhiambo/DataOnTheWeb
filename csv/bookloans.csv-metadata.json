@@ -1,0 +1,57 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "bookloans.csv",
+    "tableSchema": {
+        "columns": [{
+            "name": "id",
+            "titles": "id",
+            "dc:description": "The unique id for the book loan",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "book_id",
+            "titles": "book id",
+            "dc:description": "The id of the book being borrowed",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "customer_id",
+            "titles": "customer id",
+            "dc:description": "The id of the customer borrowing the book",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "loan_date",
+            "titles": "loan date",
+            "dc:description": "The date the book was borrowed",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "return_date",
+            "titles": "return date",
+            "dc:description": "The date the book needs to be returned",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "overdue_days",
+            "titles": "overdue days",
+            "dc:description": "The number of days past the return date",
+            "datatype": "nonNegativeInteger",
+            "required": true
+        }],
+        "foreignKeys": [{
+            "columnReference": "book_id",
+            "reference": {
+                "resource": "books.csv",
+                "columnReference": "id"
+            }
+        }, {
+            "columnReference": "customer_id",
+            "reference": {
+                "resource": "customers.csv",
+                "columnReference": "id"
+            }
+        }],
+        "primaryKey": "id"
+    }
+}
