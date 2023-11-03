@@ -1,0 +1,23 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "libraries.csv",
+    "tableSchema": {
+        "columns": [{
+            "titles": "id",
+            "dc:description": "The unique id for the library",
+            "datatype": "string",
+            "required": true
+        }, {
+            "titles": "name",
+            "dc:description": "The name of the library",
+            "datatype": "string",
+            "required": true
+        }, {
+            "titles": "founding year",
+            "dc:description": "The year the library was established",
+            "datatype": "gYear",
+            "required": true
+        }],
+        "primaryKey": "id"
+    }
+}

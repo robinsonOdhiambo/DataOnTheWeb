@@ -1,0 +1,46 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "branches.csv",
+    "tableSchema": {
+        "columns": [{
+            "titles": "id",
+            "dc:description": "The unique id for the branch",
+            "datatype": "string",
+            "required": true
+        }, {
+            "titles": "library id",
+            "dc:description": "The id of the library",
+            "datatype": "string",
+            "required": true
+        }, {
+            "titles": "address id",
+            "dc:description": "The id of the address",
+            "datatype": "string",
+            "required": true
+        }, {
+            "titles": "opening time",
+            "dc:description": "The time the branch of the library opens",
+            "datatype": "string",
+            "required": true
+        }, {
+            "titles": "closing time",
+            "dc:description": "The time the branch of the library closes",
+            "datatype": "string",
+            "required": true
+        }],
+        "foreignKeys": [{
+            "columnReference": "library id",
+            "reference": {
+                "resource": "libraries.csv",
+                "columnReference": "id"
+            }
+        }, {
+            "columnReference": "address id",
+            "reference": {
+                "resource": "addresses.csv",
+                "columnReference": "id"
+            }
+        }],
+        "primaryKey": "id"
+    }
+}
