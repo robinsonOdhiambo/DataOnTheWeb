@@ -1,0 +1,5 @@
+id,library id,address id,name,opening time,closing time
+BSL-1,BSL,ADR-1,Bavarian State Library in Munich,08:00,22:00
+BSL-2,BSL,ADR-2,Bavarian State Library in Passau,08:00,22:00
+HSL-1,HSL,ADR-3,Hessen State Library in RheinMain University ,08:00,22:00
+HSL-2,HSL,ADR-4,Hessen State Library in Frankfurt University ,08:00,22:00

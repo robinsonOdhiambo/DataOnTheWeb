@@ -2,13 +2,17 @@
 
 class Library {
     name
+    founding year 
 }
 
 class Branch {
     name
+    opening time
+    closing time
 }
 
 class Address {
+    city
     street name
     building number
 }
@@ -36,7 +40,7 @@ class BookLoan {
     overdue days
 }
 
-Library "1..*" -> "1" Branch : has branch
+Library "1" -> "1..*" Branch : has branch
 Branch "1..*" --> "1" Address : has address
 Branch "1..*" -down-> "1" Book : has book
 Author "1..*" -> "*" Book : writes
