@@ -1,0 +1,63 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "books.csv",
+    "tableSchema": {
+        "columns": [{
+            "name": "id",
+            "titles": "id",
+            "dc:description": "The unique id for the book",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "branch_id",
+            "titles": "branch id",
+            "dc:description": "The id of the branch",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "author_id",
+            "titles": "author id",
+            "dc:description": "The id of the author",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "serial_no",
+            "titles": "serial number",
+            "dc:description": "The serial number of the book",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "name",
+            "titles": "name",
+            "dc:description": "The name of the book",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "genre",
+            "titles": "genre",
+            "dc:description": "The genre of the book",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "copies",
+            "titles": "copies",
+            "dc:description": "The copies of the book",
+            "datatype": "nonNegativeInteger",
+            "required": true
+        }],
+        "foreignKeys": [{
+            "columnReference": "branch_id",
+            "reference": {
+                "resource": "branches.csv",
+                "columnReference": "id"
+            }
+        }, {
+            "columnReference": "author_id",
+            "reference": {
+                "resource": "authors.csv",
+                "columnReference": "id"
+            }
+        }],
+        "primaryKey": "id"
+    }
+}

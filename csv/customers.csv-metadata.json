@@ -1,0 +1,26 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "url": "customers.csv",
+    "tableSchema": {
+        "columns": [{
+            "name": "id",
+            "titles": "id",
+            "dc:description": "The unique id for the customer",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "firstname",
+            "titles": "firstname",
+            "dc:description": "The firstname of the customer",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "lastname",
+            "titles": "lastname",
+            "dc:description": "The lastname of the customer",
+            "datatype": "string",
+            "required": true
+        }],
+        "primaryKey": "id"
+    }
+}

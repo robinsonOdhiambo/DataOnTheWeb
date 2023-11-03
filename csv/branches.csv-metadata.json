@@ -3,39 +3,50 @@
     "url": "branches.csv",
     "tableSchema": {
         "columns": [{
+            "name": "id",
             "titles": "id",
             "dc:description": "The unique id for the branch",
             "datatype": "string",
             "required": true
         }, {
+            "name": "library_id",
             "titles": "library id",
             "dc:description": "The id of the library",
             "datatype": "string",
             "required": true
         }, {
+            "name": "address_id",
             "titles": "address id",
             "dc:description": "The id of the address",
             "datatype": "string",
             "required": true
         }, {
+            "name": "name",
+            "titles": "name",
+            "dc:description": "The name of the branch",
+            "datatype": "string",
+            "required": true
+        }, {
+            "name": "opening_time",
             "titles": "opening time",
             "dc:description": "The time the branch of the library opens",
             "datatype": "string",
             "required": true
         }, {
+            "name": "closing_time",
             "titles": "closing time",
             "dc:description": "The time the branch of the library closes",
             "datatype": "string",
             "required": true
         }],
         "foreignKeys": [{
-            "columnReference": "library id",
+            "columnReference": "library_id",
             "reference": {
                 "resource": "libraries.csv",
                 "columnReference": "id"
             }
         }, {
-            "columnReference": "address id",
+            "columnReference": "address_id",
             "reference": {
                 "resource": "addresses.csv",
                 "columnReference": "id"

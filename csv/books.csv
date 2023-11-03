@@ -2,4 +2,4 @@ id,branch id,author id,serial number,name,genre,copies
 BK-1,BSL-1,AUT-1,10031200,To kill a mocking bird,thriller,23
 BK-2,BSL-2,AUT-2,40031200,The world of yesterday,biography,40
 BK-3,HSL-1,AUT-3,61231200,Sapiens: A Brief History of Humankind,anthropology,12
-BK-4,HSL-2,AUT-3,61231641,Homo Deus: A Brief History of Tomorrow ,anthropology,42
+BK-4,HSL-2,AUT-3,61231641,Homo Deus: A Brief History of Tomorrow,anthropology,42
