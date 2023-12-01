@@ -44,7 +44,7 @@ Library "1" -> "1..*" Branch : has branch
 Branch "1..*" --> "1" Address : has address
 Branch "1..*" -down-> "1" Book : has book
 Author "1..*" -> "*" Book : writes
-Book "1..*" -down-> "1" BookLoan : is borrowed
-Customer "1..*" -up-> "1" BookLoan : receives
+Book "1..*" -down-> "*" BookLoan : is borrowed
+Customer "1..*" -up-> "*" BookLoan : receives
 
 @enduml
