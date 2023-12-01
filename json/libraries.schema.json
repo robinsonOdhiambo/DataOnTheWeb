@@ -1,0 +1,135 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://my-public-url/libraries.schema.json",
+    "title": "Libraries",
+    "description": "List of libraries in Germany",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "required": true
+        },
+        "founding_year": {
+          "type": "integer",
+          "required": true
+        },
+        "branches": {
+          "type": "array",
+          "required": false,
+          "items": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "street_name": {
+                    "type": "string",
+                    "required": true
+                  },
+                  "building_number": {
+                    "type": "integer",
+                    "required": true
+                  }
+                }
+              },
+              "books": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "serial_number": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "genre": {
+                      "type": "string",
+                      "required": true
+                    },
+                    "copies": {
+                      "type": "integer",
+                      "required": true
+                    },
+                    "bookLoans": {
+                      "type": "array",
+                      "required": false,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loan_date": {
+                            "type": "string",
+                            "format": "date",
+                            "required": true
+                          },
+                          "return_date": {
+                            "type": "string",
+                            "format": "date",
+                            "required": true
+                          },
+                          "overdue_days": {
+                            "type": "integer",
+                            "required": true
+                          },
+                          "customer": {
+                            "type": "object",
+                            "required": true,
+                            "properties": {
+                              "firstname": {
+                                "type": "string",
+                                "required": true
+                              },
+                              "lastname": {
+                                "type": "string",
+                                "required": true
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "author": {
+                      "type": "object",
+                      "required": true,
+                      "properties": {
+                        "firstname": {
+                          "type": "string",
+                          "required": true
+                        },
+                        "lastname": {
+                          "type": "string",
+                          "required": true
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "name": {
+                "type": "string",
+                "required": true
+              },
+              "opening_time": {
+                "type": "string",
+                 "format": "time",
+                "required": true
+              },
+              "closing_time": {
+                "type": "string",
+                "format": "time",
+                "required": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
