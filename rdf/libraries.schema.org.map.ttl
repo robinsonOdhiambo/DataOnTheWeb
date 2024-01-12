@@ -4,10 +4,10 @@
 
 
 libs:Library rdfs:subClassOf schema:Organization ;
-    schema:parentOrganization libs:Branch .
+    schema:subOrganization libs:Branch .
 
 libs:Branch rdfs:subClassOf schema:Library ;
-    schema:subOrganization libs:library .
+    schema:parentOrganization libs:library .
 
 libs:Book rdfs:subClassOf schema:Book .
 
