@@ -1,0 +1,22 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix libs: <http://www.example.org/data-on-web/vocabulary/libraries/> .
+@prefix schema: <http://schema.org/> .
+
+
+libs:Library rdfs:subClassOf schema:Organization ;
+    schema:parentOrganization libs:Branch .
+
+libs:Branch rdfs:subClassOf schema:Library ;
+    schema:subOrganization libs:library .
+
+libs:Book rdfs:subClassOf schema:Book .
+
+libs:Author rdfs:subClassOf schema:Person .
+
+libs:Address rdfs:subClassOf schema:Address .
+
+libs:BookLoan rdfs:subClassOf schema:BorrowAction .
+
+libs:Customer rdfs:subClassOf schema:Person .
