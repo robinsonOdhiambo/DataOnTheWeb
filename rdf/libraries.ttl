@@ -54,3 +54,99 @@ libs:branchName a rdf:Property ;
     rdfs:domain libs:Branch ;
     rdfs:range xsd:string;
     rdfs:comment "Name of a branch"@en .
+
+libs:openingTime a rdf:Property ;
+    rdfs:label "opening time"@en ;
+    rdfs:domain libs:Branch ;
+    rdfs:range xsd:string;
+    rdfs:comment "Opening time of the branch"@en .
+
+libs:closingTime a rdf:Property ;
+    rdfs:label "closing time"@en ;
+    rdfs:domain libs:Branch ;
+    rdfs:range xsd:string;
+    rdfs:comment "Closing time of the branch"@en .
+
+libs:city a rdf:Property ;
+    rdfs:label "city"@en ;
+    rdfs:domain libs:Address ;
+    rdfs:range xsd:string;
+    rdfs:comment "Name of a city"@en .
+
+libs:streetName a rdf:Property ;
+    rdfs:label "street name"@en ;
+    rdfs:domain libs:Address ;
+    rdfs:range xsd:string;
+    rdfs:comment "Name of a street"@en .
+
+libs:buildingNumber a rdf:Property ;
+    rdfs:label "building number"@en ;
+    rdfs:domain libs:Address ;
+    rdfs:range xsd:integer;
+    rdfs:comment "Number of a building in a particular street"@en .
+
+libs:bookName a rdf:Property ;
+    rdfs:label "book name"@en ;
+    rdfs:domain libs:Book ;
+    rdfs:range xsd:string;
+    rdfs:comment "Name of a book"@en .
+
+libs:genre a rdf:Property ;
+    rdfs:label "genre"@en ;
+    rdfs:domain libs:Book ;
+    rdfs:range xsd:string;
+    rdfs:comment "Genre of a book"@en .
+
+libs:serialNumber a rdf:Property ;
+    rdfs:label "serial number"@en ;
+    rdfs:domain libs:Book ;
+    rdfs:range xsd:string;
+    rdfs:comment "Serial number is a unique identification of a book"@en .
+
+libs:copies a rdf:Property ;
+    rdfs:label "copies"@en ;
+    rdfs:domain libs:Book ;
+    rdfs:range xsd:integer;
+    rdfs:comment "Number of copies of a book"@en .
+
+libs:authorFirstname a rdf:Property ;
+    rdfs:label "author firstname"@en ;
+    rdfs:domain libs:Author ;
+    rdfs:range xsd:string;
+    rdfs:comment "Firstname of the author"@en .
+
+libs:authorLastname a rdf:Property ;
+    rdfs:label "author lastname"@en ;
+    rdfs:domain libs:Author ;
+    rdfs:range xsd:string;
+    rdfs:comment "Lastname of the author"@en .
+
+libs:loanDate a rdf:Property ;
+    rdfs:label "loan date"@en ;
+    rdfs:domain libs:BookLoan ;
+    rdfs:range xsd:Date;
+    rdfs:comment "loan date of the book"@en .
+
+libs:returnDate a rdf:Property ;
+    rdfs:label "return date"@en ;
+    rdfs:domain libs:BookLoan ;
+    rdfs:range xsd:Date;
+    rdfs:comment "date of return of a book"@en .
+
+libs:overdueDays a rdf:Property ;
+    rdfs:label "overdue days"@en ;
+    rdfs:domain libs:BookLoan ;
+    rdfs:range xsd:integer;
+    rdfs:comment "number of days past the return date"@en .
+
+libs:customerFirstname a rdf:Property ;
+    rdfs:label "customer firstname"@en ;
+    rdfs:domain libs:Customer ;
+    rdfs:range xsd:string;
+    rdfs:comment "Firstname of the customer"@en .
+
+libs:customerLastname a rdf:Property ;
+    rdfs:label "customer lastname"@en ;
+    rdfs:domain libs:Customer ;
+    rdfs:range xsd:string;
+    rdfs:comment "Lastname of the customer"@en .
