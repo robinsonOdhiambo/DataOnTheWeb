@@ -1,0 +1,56 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix libs: <http://www.example.org/data-on-web/vocabulary/libraries/> .
+
+libs:Library a rdfs:Class ;
+    rdfs:label "State library"@en ;
+    rdfs:comment "A library operated by a state government in Germany"@en .
+
+libs:Branch a rdfs:Class ;
+    rdfs:label "Branch of a library"@en ;
+    rdfs:comment "A branch of a library operated by a state in Germany"@en .
+
+libs:Book a rdfs:Class ;
+    rdfs:label "Book"@en ;
+    rdfs:comment "A written work consisting of pages"@en .
+
+libs:Author a rdfs:Class ;
+    rdfs:label "Author"@en ;
+    rdfs:comment "The writter of a book"@en .
+
+libs:Address a rdfs:Class ;
+    rdfs:label "Address of library"@en ;
+    rdfs:comment "The location of the branch of a library"@en .
+
+libs:BookLoan a rdfs:Class ;
+    rdfs:label "Book loan"@en ;
+    rdfs:comment "A record of lending a book"@en .
+
+libs:Customer a rdfs:Class ;
+    rdfs:label "Customer"@en ;
+    rdfs:comment "A client of a library"@en .
+
+libs:libraryName a rdf:Property ;
+    rdfs:label "library name"@en ;
+    rdfs:domain libs:Library ;
+    rdfs:range xsd:string;
+    rdfs:comment "Name of a library"@en .
+
+libs:foundingYear a rdf:Property ;
+    rdfs:label "founding year"@en ;
+    rdfs:domain libs:Library ;
+    rdfs:range xsd:integer;
+    rdfs:comment "The year the library was founded"@en .
+
+libs:hasBranch a rdf:Property ;
+    rdfs:label "has branch"@en ;
+    rdfs:domain libs:Library ;
+    rdfs:range xsd:Branch;
+    rdfs:comment "The branch of a library"@en .
+
+libs:branchName a rdf:Property ;
+    rdfs:label "branch name"@en ;
+    rdfs:domain libs:Branch ;
+    rdfs:range xsd:string;
+    rdfs:comment "Name of a branch"@en .
